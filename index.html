@@ -3,213 +3,371 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Automated Mobile Robot with Object Detection</title>
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: #333; line-height: 1.6; }
-        .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
-        header { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 60px 20px; text-align: center; animation: slideDown 0.8s ease; }
-        header h1 { font-size: 3em; margin-bottom: 10px; }
-        header p { font-size: 1.3em; opacity: 0.9; }
-        @keyframes slideDown { from { transform: translateY(-50px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
-        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
-        @keyframes rotate { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
-        .robot-animation { width: 100px; height: 100px; margin: 20px auto; background: linear-gradient(45deg, #ff6b6b, #ee5a6f); border-radius: 10px; animation: rotate 3s linear infinite; position: relative; }
-        .robot-animation::before { content: '🤖'; font-size: 50px; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(-360deg); animation: rotate 3s linear infinite reverse; }
-        section { margin: 40px 0; padding: 30px; background: #f8f9fa; border-radius: 10px; animation: fadeIn 0.8s ease; }
-        section h2 { color: #667eea; margin-bottom: 20px; font-size: 2em; }
-        .feature-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin: 20px 0; }
-        .feature-card { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: transform 0.3s, box-shadow 0.3s; }
-        .feature-card:hover { transform: translateY(-10px); box-shadow: 0 8px 12px rgba(0,0,0,0.2); }
-        .feature-card h3 { color: #667eea; margin-bottom: 10px; }
-        .specs-table { width: 100%; border-collapse: collapse; margin: 20px 0; background: white; border-radius: 8px; overflow: hidden; }
-        .specs-table th { background: #667eea; color: white; padding: 12px; text-align: left; }
-        .specs-table td { padding: 12px; border-bottom: 1px solid #e0e0e0; }
-        .specs-table tr:hover { background: #f5f5f5; }
-        .tech-stack { display: flex; flex-wrap: wrap; gap: 15px; margin: 20px 0; }
-        .tech-badge { background: #667eea; color: white; padding: 8px 16px; border-radius: 20px; font-size: 0.9em; animation: fadeIn 1s ease; }
-        .cta-button { display: inline-block; background: linear-gradient(135deg, #667eea, #764ba2); color: white; padding: 15px 30px; border-radius: 5px; text-decoration: none; margin: 10px 5px; transition: transform 0.3s, box-shadow 0.3s; font-weight: bold; border: none; cursor: pointer; }
-        .cta-button:hover { transform: translateY(-3px); box-shadow: 0 8px 16px rgba(102, 126, 234, 0.4); }
-        .architecture-diagram { background: white; padding: 30px; border-radius: 8px; text-align: center; margin: 20px 0; }
-        .diagram-box { display: inline-block; background: #667eea; color: white; padding: 15px 25px; margin: 10px; border-radius: 5px; font-weight: bold; }
-        footer { background: #333; color: white; text-align: center; padding: 30px; margin-top: 40px; }
-        .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 20px; margin: 20px 0; }
-        .stat-card { background: white; padding: 20px; border-radius: 8px; text-align: center; }
-        .stat-number { font-size: 2.5em; color: #667eea; font-weight: bold; }
-        .stat-label { color: #666; margin-top: 5px; }
-        @media (max-width: 768px) { header h1 { font-size: 1.8em; } .feature-grid { grid-template-columns: 1fr; } }
-    </style>
+    <meta name="description" content="Object Detection Based Automated Mobile Robot - Research by Roshan Pandey">
+    <meta name="author" content="Roshan Pandey">
+    <title>Object Detection Based Automated Mobile Robot | Roshan Pandey</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header>
-        <h1>🤖 Automated Mobile Robot</h1>
-        <p>Object Detection Based Pick & Place System</p>
-        <div class="robot-animation"></div>
-    </header>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <a href="index.html">Roshan Pandey</a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#publications">Publications</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
 
-    <div class="container">
-        <section>
-            <h2>🎯 Project Overview</h2>
-            <p>An intelligent autonomous mobile robot with a 4-DOF robotic arm that uses YOLO object detection, computer vision algorithms, and machine learning to autonomously identify, locate, and manipulate objects in real-time without human intervention.</p>
-            <div class="stats">
-                <div class="stat-card">
-                    <div class="stat-number">92%+</div>
-                    <div class="stat-label">Detection Accuracy</div>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1 class="project-title">Object Detection Based Automated Mobile Robot</h1>
+            <p class="project-subtitle">Autonomous pick-and-place system using YOLO v8 and robotic arm kinematics</p>
+            <div class="project-meta">
+                <span class="author">Roshan Pandey</span> | 
+                <span class="institution">Tribhuvan University, Institute of Engineering</span> | 
+                <span class="date">September 2024</span>
+            </div>
+            <div class="project-links">
+                <a href="papers/major-project-report.pdf" class="btn btn-primary" target="_blank">
+                    📄 Full Report (PDF)
+                </a>
+                <a href="https://github.com/Roshan20222/Automated-Mobile-Robot-Object-Detection" class="btn btn-secondary" target="_blank">
+                    💻 GitHub Repository
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Abstract Section -->
+    <section class="section">
+        <div class="container">
+            <h2>Abstract</h2>
+            <p class="abstract">
+                This project proposes the control design and implementation of an object detection based 
+                automated mobile robot integrated with a robotic arm. The system leverages computer vision 
+                algorithms (YOLO v8) to analyze visual information captured by cameras in real-time. 
+                The images are processed to extract relevant features such as object detection, tracking, 
+                and pose estimation, which generate control signals for precise manipulation of the mobile robot. 
+                Our system integrates state-of-the-art techniques in computer vision, machine learning, 
+                trajectory optimization, and visual servoing.
+            </p>
+            <div class="keywords">
+                <strong>Keywords:</strong> Robotics, Machine Learning, Automation, YOLO, Computer Vision, 
+                Kinematics, Object Detection
+            </div>
+        </div>
+    </section>
+
+    <!-- System Overview with Image -->
+    <section class="section bg-light">
+        <div class="container">
+            <h2>System Architecture</h2>
+            <div class="content-grid">
+                <div class="content-text">
+                    <h3>Key Components</h3>
+                    <ul>
+                        <li><strong>Processing Unit:</strong> Raspberry Pi 4 (Quad-core 1.2GHz, 4GB RAM)</li>
+                        <li><strong>Vision System:</strong> Raspberry Pi Camera (5MP) + USB Webcam</li>
+                        <li><strong>Mobile Platform:</strong> 4 DC Motors with L298N Motor Driver</li>
+                        <li><strong>Manipulation:</strong> 4-DOF Robotic Arm with MG90S Servo Motors</li>
+                        <li><strong>Sensors:</strong> HC-SR04 Ultrasonic Sensor for distance measurement</li>
+                        <li><strong>Power:</strong> LiPo Battery with 5V Buck Converter</li>
+                    </ul>
                 </div>
-                <div class="stat-card">
-                    <div class="stat-number">15-20</div>
-                    <div class="stat-label">FPS (Frame Rate)</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-number">±2mm</div>
-                    <div class="stat-label">Arm Accuracy</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-number">4-DOF</div>
-                    <div class="stat-label">Robotic Arm</div>
+                <div class="content-image">
+                    <img src="images/major-project/Block Diagram of Proposed System.png" 
+                         alt="Block Diagram of Proposed System" 
+                         class="responsive-img">
+                    <p class="image-caption">Figure 1: Block diagram showing system architecture</p>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section>
-            <h2>✨ Key Features</h2>
-            <div class="feature-grid">
-                <div class="feature-card">
-                    <h3>🔍 Real-time Detection</h3>
-                    <p>YOLOv5/v8 CNN models for precise object detection and classification at 15-20 FPS</p>
+    <!-- Hardware Integration -->
+    <section class="section">
+        <div class="container">
+            <h2>Hardware Integration</h2>
+            <div class="image-gallery">
+                <div class="gallery-item">
+                    <img src="images/major-project/Raspberry Pi.png" alt="Raspberry Pi" class="responsive-img">
+                    <p class="image-caption">Raspberry Pi 4 - Central Processing Unit</p>
                 </div>
-                <div class="feature-card">
-                    <h3>🗺️ Path Planning</h3>
-                    <p>Dijkstra's algorithm for optimal autonomous navigation and obstacle avoidance</p>
+                <div class="gallery-item">
+                    <img src="images/major-project/Hardware Assembled.png" alt="Hardware Assembly" class="responsive-img">
+                    <p class="image-caption">Complete Hardware Assembly</p>
                 </div>
-                <div class="feature-card">
-                    <h3>🦾 Robotic Arm</h3>
-                    <p>4-DOF arm with inverse kinematics for precise manipulation and positioning</p>
-                </div>
-                <div class="feature-card">
-                    <h3>🎨 Color Sorting</h3>
-                    <p>Automatic detection and sorting of objects by color identification</p>
-                </div>
-                <div class="feature-card">
-                    <h3>📏 Distance Measurement</h3>
-                    <p>HC-SR04 ultrasonic sensors for accurate object positioning</p>
-                </div>
-                <div class="feature-card">
-                    <h3>🎥 Live Processing</h3>
-                    <p>Real-time video feed analysis and decision making</p>
+                <div class="gallery-item">
+                    <img src="images/major-project/Coordinate Frame of 4 DOF Arm Robot.png" 
+                         alt="4-DOF Arm Coordinate Frame" class="responsive-img">
+                    <p class="image-caption">4-DOF Robotic Arm Coordinate Frame</p>
                 </div>
             </div>
-        </section>
+            <p>
+                The hardware integration was completed in two phases. First, the mobile platform was assembled 
+                with four DC motors connected to wheels, controlled through an L298N motor driver. The Raspberry Pi 
+                coordinates all components through GPIO interfaces. Second, a 4-DOF robotic arm was designed using 
+                CAD software and fabricated via 3D printing (print speed: 80mm/s, hot-end temp: 200°C, 
+                bed temp: 60°C, layer height: 0.2mm, infill: 20%).
+            </p>
+        </div>
+    </section>
 
-        <section>
-            <h2>⚙️ Hardware Components</h2>
-            <table class="specs-table">
-                <thead>
-                    <tr>
-                        <th>Component</th>
-                        <th>Model/Spec</th>
-                        <th>Purpose</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Main Controller</td>
-                        <td>Raspberry Pi 4 (4GB)</td>
-                        <td>Image processing & control</td>
-                    </tr>
-                    <tr>
-                        <td>Secondary Controller</td>
-                        <td>Arduino Mega 2560</td>
-                        <td>Motor & sensor control</td>
-                    </tr>
-                    <tr>
-                        <td>Motors (Wheels)</td>
-                        <td>4x DC Motors</td>
-                        <td>Vehicle locomotion</td>
-                    </tr>
-                    <tr>
-                        <td>Motors (Arm)</td>
-                        <td>4x MG90S Servo</td>
-                        <td>Robotic arm actuation</td>
-                    </tr>
-                    <tr>
-                        <td>Motor Driver</td>
-                        <td>L298N</td>
-                        <td>DC motor control</td>
-                    </tr>
-                    <tr>
-                        <td>Camera</td>
-                        <td>Raspberry Pi Camera (5MP)</td>
-                        <td>Visual input</td>
-                    </tr>
-                    <tr>
-                        <td>Distance Sensor</td>
-                        <td>HC-SR04 Ultrasonic</td>
-                        <td>Object distance measurement</td>
-                    </tr>
-                    <tr>
-                        <td>Power Supply</td>
-                        <td>LiPo Battery (11.1V)</td>
-                        <td>System power</td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
-
-        <section>
-            <h2>💻 Technology Stack</h2>
-            <div class="tech-stack">
-                <span class="tech-badge">Python 3.7+</span>
-                <span class="tech-badge">YOLO v5/v8</span>
-                <span class="tech-badge">OpenCV</span>
-                <span class="tech-badge">PySerial</span>
-                <span class="tech-badge">NumPy</span>
-                <span class="tech-badge">Raspberry Pi OS</span>
-                <span class="tech-badge">Arduino</span>
-                <span class="tech-badge">Machine Learning</span>
-            </div>
-        </section>
-
-        <section>
-            <h2>🏗️ System Architecture</h2>
-            <div class="architecture-diagram">
-                <div style="margin-bottom: 20px;">
-                    <div class="diagram-box">Raspberry Pi</div>
-                    <p style="margin: 10px 0;">↓ (Image Processing & Control)</p>
-                    <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
-                        <div class="diagram-box">Camera</div>
-                        <div class="diagram-box">Motor Drivers</div>
-                        <div class="diagram-box">Sensors</div>
-                    </div>
-                    <p style="margin: 10px 0;">↓</p>
-                    <div class="diagram-box">Mobile Robot + Robotic Arm</div>
+    <!-- Methodology -->
+    <section class="section bg-light">
+        <div class="container">
+            <h2>Methodology</h2>
+            
+            <h3>Object Detection Using YOLO v8</h3>
+            <div class="content-grid">
+                <div class="content-text">
+                    <p>
+                        The system employs YOLO (You Only Look Once) v8 for real-time object detection. 
+                        The model was trained on a custom dataset containing red boxes, yellow boxes, 
+                        robot images, and destination markers.
+                    </p>
+                    <h4>Data Augmentation</h4>
+                    <ul>
+                        <li>Rotation and flipping transformations</li>
+                        <li>Zoom and crop operations</li>
+                        <li>Brightness and contrast adjustments</li>
+                        <li>Noise addition for robustness</li>
+                    </ul>
+                    <p>
+                        Dataset split: 70% training, 20% validation, 10% testing. 
+                        Images were labeled using CVAT (Computer Vision Annotation Tool). 
+                        The model was trained for 50 epochs using the Ultralytics package.
+                    </p>
+                </div>
+                <div class="content-image">
+                    <img src="images/major-project/YOLO Architecture.png" 
+                         alt="YOLO Architecture" class="responsive-img">
+                    <p class="image-caption">Figure 2: YOLO Neural Network Architecture</p>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section>
-            <h2>🚀 Quick Start</h2>
-            <p><strong>Clone Repository:</strong></p>
-            <pre style="background: #f5f5f5; padding: 15px; border-radius: 5px; overflow-x: auto; margin: 10px 0;">git clone https://github.com/Roshan20222/Automated-Mobile-Robot-Object-Detection.git</pre>
-            <p><strong>Install Dependencies:</strong></p>
-            <pre style="background: #f5f5f5; padding: 15px; border-radius: 5px; overflow-x: auto; margin: 10px 0;">pip install -r requirements.txt</pre>
-            <p><strong>Run Project:</strong></p>
-            <pre style="background: #f5f5f5; padding: 15px; border-radius: 5px; overflow-x: auto; margin: 10px 0;">python src/main.py</pre>
-        </section>
+    <!-- Results Section -->
+    <section class="section">
+        <div class="container">
+            <h2>Experimental Results</h2>
+            
+            <h3>Object Detection Performance</h3>
+            <div class="results-grid">
+                <div class="result-item">
+                    <img src="images/major-project/Performance Matrix Graphs.png" 
+                         alt="Performance Metrics" class="responsive-img">
+                    <p class="image-caption">Training loss and accuracy curves over 50 epochs</p>
+                </div>
+                <div class="result-item">
+                    <img src="images/major-project/Confusion Matrix.png" 
+                         alt="Confusion Matrix" class="responsive-img">
+                    <p class="image-caption">Confusion matrix showing classification accuracy</p>
+                </div>
+            </div>
 
-        <section style="text-align: center;">
-            <h2>📚 Learn More</h2>
-            <p>Check out the complete documentation on GitHub</p>
-            <a href="https://github.com/Roshan20222/Automated-Mobile-Robot-Object-Detection" class="cta-button">View on GitHub</a>
-            <a href="https://github.com/Roshan20222/Automated-Mobile-Robot-Object-Detection#readme" class="cta-button">Read Documentation</a>
-        </section>
-    </div>
+            <div class="metrics-table">
+                <h4>Performance Metrics</h4>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Metric</th>
+                            <th>Value</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Precision</td>
+                            <td>92%</td>
+                        </tr>
+                        <tr>
+                            <td>Recall</td>
+                            <td>89%</td>
+                        </tr>
+                        <tr>
+                            <td>Object Detection Success Rate</td>
+                            <td>94%</td>
+                        </tr>
+                        <tr>
+                            <td>Grasping Success Rate</td>
+                            <td>91%</td>
+                        </tr>
+                        <tr>
+                            <td>Inference Time</td>
+                            <td>45 ms/frame</td>
+                        </tr>
+                        <tr>
+                            <td>Positioning RMSE</td>
+                            <td>2.3 mm</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
 
-    <footer>
-        <p><strong>Automated Mobile Robot with Object Detection</strong></p>
-        <p>Author: Roshan Pandey | Institution: Tribhuvan University, Kathmandu Engineering College</p>
-        <p>© 2024 - 2025 | MIT License</p>
-        <p>🌐 <a href="https://github.com/Roshan20222" style="color: #667eea; text-decoration: none;">GitHub Profile</a></p>
+            <h3>Detection and Path Planning</h3>
+            <div class="results-grid">
+                <div class="result-item">
+                    <img src="images/major-project/Labeled Image Data.png" 
+                         alt="Labeled Training Data" class="responsive-img">
+                    <p class="image-caption">Labeled training images with bounding boxes</p>
+                </div>
+                <div class="result-item">
+                    <img src="images/major-project/Predicted Image.png" 
+                         alt="Prediction Results" class="responsive-img">
+                    <p class="image-caption">Real-time detection with confidence scores</p>
+                </div>
+            </div>
+
+            <div class="results-grid">
+                <div class="result-item">
+                    <img src="images/major-project/Predicted image with grid and coordinates.png" 
+                         alt="Grid System" class="responsive-img">
+                    <p class="image-caption">Grid-based coordinate system for path planning</p>
+                </div>
+                <div class="result-item">
+                    <img src="images/major-project/Predicted Image with coordinates and path.png" 
+                         alt="Path Planning" class="responsive-img">
+                    <p class="image-caption">Dijkstra's algorithm path from robot to target</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Kinematics Section -->
+    <section class="section bg-light">
+        <div class="container">
+            <h2>Robotic Arm Kinematics</h2>
+            
+            <h3>Forward and Inverse Kinematics</h3>
+            <p>
+                The 4-DOF robotic arm employs Denavit-Hartenberg (D-H) parameters for forward kinematics 
+                calculation and algebraic approach for inverse kinematics. This enables precise end-effector 
+                positioning for object manipulation.
+            </p>
+
+            <div class="equation-box">
+                <h4>Forward Kinematics End-Effector Position:</h4>
+                <div class="equation">
+                    <p><em>P<sub>x</sub></em> = cos(θ₁)[130cos(θ₂ + θ₃ + θ₄) + 216cos(θ₂ + θ₃) + 180cos(θ₂) + 100cos(θ₂)]</p>
+                    <p><em>P<sub>y</sub></em> = sin(θ₁)[130cos(θ₂ + θ₃ + θ₄) + 216cos(θ₂ + θ₃) + 180cos(θ₂) + 100cos(θ₂)]</p>
+                    <p><em>P<sub>z</sub></em> = 145 - 108sin(θ₂ + θ₃) - 90sin(θ₂) - 130cos(θ₂ + θ₃ + θ₄)</p>
+                </div>
+            </div>
+
+            <div class="content-grid">
+                <div class="content-text">
+                    <h4>Inverse Kinematics Approach:</h4>
+                    <ol>
+                        <li>Calculate base rotation: θ₁ = atan2(P<sub>y</sub>, P<sub>x</sub>)</li>
+                        <li>Compute radial distance and solve for joint angles θ₂, θ₃, θ₄</li>
+                        <li>Apply geometric constraints and joint limits</li>
+                        <li>Validate solution with forward kinematics</li>
+                    </ol>
+                </div>
+                <div class="content-image">
+                    <img src="images/major-project/Flow Chart for motion planning.png" 
+                         alt="Motion Planning Flowchart" class="responsive-img">
+                    <p class="image-caption">Motion planning algorithm flowchart</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Applications Section -->
+    <section class="section">
+        <div class="container">
+            <h2>Applications</h2>
+            <div class="applications-grid">
+                <div class="app-card">
+                    <h3>🏭 Manufacturing</h3>
+                    <p>Product assembly, parts welding, surface painting, and material handling in plants</p>
+                </div>
+                <div class="app-card">
+                    <h3>📦 Logistics</h3>
+                    <p>Cargo loading/unloading from trucks, ships, and airplanes; warehouse operations</p>
+                </div>
+                <div class="app-card">
+                    <h3>🏗️ Construction</h3>
+                    <p>Building inspection and repair, infrastructure maintenance, material transport</p>
+                </div>
+                <div class="app-card">
+                    <h3>🎖️ Military</h3>
+                    <p>Weapons handling, equipment inspection/repair, bomb disposal operations</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Publications Section -->
+    <section class="section bg-light" id="publications">
+        <div class="container">
+            <h2>Publications & Documentation</h2>
+            <div class="publication-item">
+                <h3>Major Project Report: Object Detection Based Automated Mobile Robot</h3>
+                <p class="pub-meta">
+                    <strong>Author:</strong> Roshan Pandey<br>
+                    <strong>Institution:</strong> Kathmandu Engineering College, Tribhuvan University<br>
+                    <strong>Department:</strong> Electronics, Communication and Information Engineering<br>
+                    <strong>Date:</strong> September 2024
+                </p>
+                <p class="pub-abstract">
+                    Complete major project report detailing the design, implementation, hardware integration, 
+                    software algorithms, experimental results, and analysis of the automated mobile robot system.
+                </p>
+                <div class="pub-links">
+                    <a href="papers/major-project-report.pdf" class="btn btn-primary" target="_blank">Download PDF</a>
+                    <a href="https://github.com/Roshan20222/Automated-Mobile-Robot-Object-Detection" class="btn btn-secondary" target="_blank">View Code</a>
+                </div>
+            </div>
+
+            <div class="publication-item">
+                <h3>Research Paper: Object Detection Based Automated Mobile Robot With Robotic Arm</h3>
+                <p class="pub-meta">
+                    <strong>Author:</strong> Roshan Pandey<br>
+                    <strong>Institution:</strong> Kathmandu Engineering College, Tribhuvan University<br>
+                    <strong>Date:</strong> September 2025
+                </p>
+                <p class="pub-abstract">
+                    Peer-reviewed research paper presenting the design, control, and implementation of 
+                    object detection-based automated mobile robot with performance metrics and validation results.
+                </p>
+                <div class="pub-links">
+                    <a href="papers/research-paper.pdf" class="btn btn-primary" target="_blank">Download PDF</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section" id="contact">
+        <div class="container">
+            <h2>Contact</h2>
+            <div class="contact-info">
+                <p><strong>Roshan Pandey</strong></p>
+                <p>Ph.D. Student in Computer Science</p>
+                <p>University of California, Berkeley (Expected 2029)</p>
+                <p>Email: <a href="mailto:pandeyroshan20222@gmail.com">pandeyroshan20222@gmail.com</a></p>
+                <p>GitHub: <a href="https://github.com/Roshan20222" target="_blank">github.com/Roshan20222</a></p>
+                <p>Portfolio: <a href="https://roshan20222.github.io" target="_blank">roshan20222.github.io</a></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Roshan Pandey. All rights reserved.</p>
+        </div>
     </footer>
+
+    <script src="js/main.js"></script>
 </body>
 </html>
