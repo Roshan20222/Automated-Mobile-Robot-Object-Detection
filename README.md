@@ -277,7 +277,7 @@ For more troubleshooting, see `docs/INSTALLATION.md`
 
 **Roshan Pandey**
 - GitHub: [@Roshan20222](https://github.com/Roshan20222)
-- Email: [Your Email]
+- Email: pandeyroshan2021@outlook.com
 - Institution: Tribhuvan University, Kathmandu Engineering College
 
 ## License
@@ -287,8 +287,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## Acknowledgments
 
 Special thanks to:
-- Project Supervisors: Er. Anmol Ratna Bajracharya, Er. Sarina Barahi
-- Project Coordinator: Er. Sujan Shrestha, Er. Dipen Manandhar
+- Project Supervisors: Er. Anmol Ratna Bajracharya
 - Department of Electronics, Communication and Information Engineering
 - Tribhuvan University, Kathmandu Engineering College
 
@@ -299,7 +298,7 @@ If you use this project in your research, please cite:
 @project{roshan2024autonomousrobot,
   title={Automated Mobile Robot with Object Detection Based Autonomous Pick and Place System},
   author={Pandey, Roshan},
-  year={2024},
+  year={2025},
   url={https://github.com/Roshan20222/Automated-Mobile-Robot-Object-Detection}
 }
 ```
