@@ -36,6 +36,7 @@ const navMenu = document.querySelector('.nav-menu');
 if (menuToggle) {
     menuToggle.addEventListener('click', () => {
         navMenu.classList.toggle('active');
+        menuToggle.classList.toggle('active');
     });
 }
 
@@ -48,11 +49,11 @@ const observerOptions = {
 const fadeInObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
-            entry.target.classList.add('fade-in');
+            entry.target.classList.add('active');
         }
     });
 }, observerOptions);
 
-document.querySelectorAll('.section').forEach(section => {
+document.querySelectorAll('.reveal').forEach(section => {
     fadeInObserver.observe(section);
 });

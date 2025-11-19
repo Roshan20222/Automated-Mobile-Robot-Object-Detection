@@ -1,23 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Object Detection Based Automated Mobile Robot - Research by Roshan Pandey">
+    <title>Automated Mobile Robot | Object Detection & Robotic Arm</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description"
+        content="Object Detection Based Automated Mobile Robot with 4-DOF Robotic Arm. A research project integrating YOLO v8, computer vision, and kinematics for autonomous pick-and-place operations.">
+    <meta name="keywords"
+        content="Robotics, Object Detection, YOLO v8, Robotic Arm, Automation, Computer Vision, Raspberry Pi, Kinematics, Mobile Robot">
     <meta name="author" content="Roshan Pandey">
-    <title>Object Detection Based Automated Mobile Robot | Roshan Pandey</title>
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Automated Mobile Robot | Object Detection & Robotic Arm">
+    <meta property="og:description"
+        content="Autonomous pick-and-place system using YOLO v8 and robotic arm kinematics.">
+    <meta property="og:image" content="Hardware Assembled.png">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+
     <!-- Navigation -->
     <nav class="navbar">
         <div class="container">
             <div class="nav-brand">
-                <a href="index.html">Roshan Pandey</a>
+                <a href="#">RoboVision</a>
             </div>
+            <button class="menu-toggle" aria-label="Toggle navigation">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
             <ul class="nav-menu">
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
+                <li><a href="#">Home</a></li>
                 <li><a href="#publications">Publications</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
@@ -29,16 +56,19 @@
         <div class="container">
             <h1 class="project-title">Object Detection Based Automated Mobile Robot</h1>
             <p class="project-subtitle">Autonomous pick-and-place system using YOLO v8 and robotic arm kinematics</p>
+
             <div class="project-meta">
-                <span class="author">Roshan Pandey</span> | 
-                <span class="institution">Tribhuvan University, Institute of Engineering</span> | 
+                <span class="author">Roshan Pandey</span> |
+                <span class="institution">Tribhuvan University, Institute of Engineering</span> |
                 <span class="date">September 2024</span>
             </div>
+
             <div class="project-links">
-                <a href="major-project-report.pdf" class="btn btn-primary" target="_blank">
+                <a href="major_project_paper.pdf.pdf" class="btn btn-primary" target="_blank">
                     📄 Full Report (PDF)
                 </a>
-                <a href="https://github.com/Roshan20222/Automated-Mobile-Robot-Object-Detection" class="btn btn-secondary" target="_blank">
+                <a href="https://github.com/Roshan20222/Automated-Mobile-Robot-Object-Detection"
+                    class="btn btn-secondary" target="_blank">
                     💻 GitHub Repository
                 </a>
             </div>
@@ -46,27 +76,27 @@
     </section>
 
     <!-- Abstract Section -->
-    <section class="section">
+    <section class="section reveal">
         <div class="container">
             <h2>Abstract</h2>
             <p class="abstract">
-                This project proposes the control design and implementation of an object detection based 
-                automated mobile robot integrated with a robotic arm. The system leverages computer vision 
-                algorithms (YOLO v8) to analyze visual information captured by cameras in real-time. 
-                The images are processed to extract relevant features such as object detection, tracking, 
-                and pose estimation, which generate control signals for precise manipulation of the mobile robot. 
-                Our system integrates state-of-the-art techniques in computer vision, machine learning, 
+                This project proposes the control design and implementation of an object detection based
+                automated mobile robot integrated with a robotic arm. The system leverages computer vision
+                algorithms (YOLO v8) to analyze visual information captured by cameras in real-time.
+                The images are processed to extract relevant features such as object detection, tracking,
+                and pose estimation, which generate control signals for precise manipulation of the mobile robot.
+                Our system integrates state-of-the-art techniques in computer vision, machine learning,
                 trajectory optimization, and visual servoing.
             </p>
             <div class="keywords">
-                <strong>Keywords:</strong> Robotics, Machine Learning, Automation, YOLO, Computer Vision, 
+                <strong>Keywords:</strong> Robotics, Machine Learning, Automation, YOLO, Computer Vision,
                 Kinematics, Object Detection
             </div>
         </div>
     </section>
 
     <!-- System Overview with Image -->
-    <section class="section bg-light">
+    <section class="section bg-light reveal">
         <div class="container">
             <h2>System Architecture</h2>
             <div class="content-grid">
@@ -82,73 +112,70 @@
                     </ul>
                 </div>
                 <div class="content-image">
-                    <img src="Block Diagram of Proposed System.png" 
-                         alt="Block Diagram of Proposed System" 
-                         class="responsive-img">
-                    <p class="image-caption">Figure 1: Block diagram showing system architecture</p>
+                    <img src="Hardware Assembled.png" alt="System Hardware Assembly" class="responsive-img">
+                    <p class="image-caption">Figure 1: System Hardware Assembly</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Hardware Integration -->
-    <section class="section">
+    <section class="section reveal">
         <div class="container">
             <h2>Hardware Integration</h2>
             <div class="image-gallery">
                 <div class="gallery-item">
-                    <img src="Raspberry Pi.png" alt="Raspberry Pi" class="responsive-img">
-                    <p class="image-caption">Raspberry Pi 4 - Central Processing Unit</p>
+                    <img src="Raspberry Pi-Camera.png" alt="Raspberry Pi Camera" class="responsive-img">
+                    <p class="image-caption">Raspberry Pi Camera Integration</p>
                 </div>
                 <div class="gallery-item">
                     <img src="Hardware Assembled.png" alt="Hardware Assembly" class="responsive-img">
                     <p class="image-caption">Complete Hardware Assembly</p>
                 </div>
                 <div class="gallery-item">
-                    <img src="Coordinate Frame of 4 DOF Arm Robot.png" 
-                         alt="4-DOF Arm Coordinate Frame" class="responsive-img">
+                    <img src="Coordinate Frame of 4 DOF Arm Robot.png" alt="4-DOF Arm Coordinate Frame"
+                        class="responsive-img">
                     <p class="image-caption">4-DOF Robotic Arm Coordinate Frame</p>
                 </div>
             </div>
-            <p>
-                The hardware integration was completed in two phases. First, the mobile platform was assembled 
-                with four DC motors connected to wheels, controlled through an L298N motor driver. The Raspberry Pi 
-                coordinates all components through GPIO interfaces. Second, a 4-DOF robotic arm was designed using 
-                CAD software and fabricated via 3D printing (print speed: 80mm/s, hot-end temp: 200°C, 
+            <p style="margin-top: 2rem; text-align: justify;">
+                The hardware integration was completed in two phases. First, the mobile platform was assembled
+                with four DC motors connected to wheels, controlled through an L298N motor driver. The Raspberry Pi
+                coordinates all components through GPIO interfaces. Second, a 4-DOF robotic arm was designed using
+                CAD software and fabricated via 3D printing (print speed: 80mm/s, hot-end temp: 200°C,
                 bed temp: 60°C, layer height: 0.2mm, infill: 20%).
             </p>
         </div>
     </section>
 
     <!-- Methodology -->
-    <section class="section bg-light">
+    <section class="section bg-light reveal">
         <div class="container">
             <h2>Methodology</h2>
-            
+
             <h3>Object Detection Using YOLO v8</h3>
             <div class="content-grid">
                 <div class="content-text">
                     <p>
-                        The system employs YOLO (You Only Look Once) v8 for real-time object detection. 
-                        The model was trained on a custom dataset containing red boxes, yellow boxes, 
+                        The system employs YOLO (You Only Look Once) v8 for real-time object detection.
+                        The model was trained on a custom dataset containing red boxes, yellow boxes,
                         robot images, and destination markers.
                     </p>
-                    <h4>Data Augmentation</h4>
+                    <h4 style="margin-top: 1rem;">Data Augmentation</h4>
                     <ul>
                         <li>Rotation and flipping transformations</li>
                         <li>Zoom and crop operations</li>
                         <li>Brightness and contrast adjustments</li>
                         <li>Noise addition for robustness</li>
                     </ul>
-                    <p>
-                        Dataset split: 70% training, 20% validation, 10% testing. 
-                        Images were labeled using CVAT (Computer Vision Annotation Tool). 
+                    <p style="margin-top: 1rem;">
+                        Dataset split: 70% training, 20% validation, 10% testing.
+                        Images were labeled using CVAT (Computer Vision Annotation Tool).
                         The model was trained for 50 epochs using the Ultralytics package.
                     </p>
                 </div>
                 <div class="content-image">
-                    <img src="YOLO Architecture.png" 
-                         alt="YOLO Architecture" class="responsive-img">
+                    <img src="YOLO Architecture.png" alt="YOLO Architecture" class="responsive-img">
                     <p class="image-caption">Figure 2: YOLO Neural Network Architecture</p>
                 </div>
             </div>
@@ -156,20 +183,18 @@
     </section>
 
     <!-- Results Section -->
-    <section class="section">
+    <section class="section reveal">
         <div class="container">
             <h2>Experimental Results</h2>
-            
+
             <h3>Object Detection Performance</h3>
             <div class="results-grid">
                 <div class="result-item">
-                    <img src="Performance Matrix Graphs.png" 
-                         alt="Performance Metrics" class="responsive-img">
+                    <img src="Performance Matrix Graphs.png" alt="Performance Metrics" class="responsive-img">
                     <p class="image-caption">Training loss and accuracy curves over 50 epochs</p>
                 </div>
                 <div class="result-item">
-                    <img src="Confusion Matrix.png" 
-                         alt="Confusion Matrix" class="responsive-img">
+                    <img src="Confusion Matrix.png" alt="Confusion Matrix" class="responsive-img">
                     <p class="image-caption">Confusion matrix showing classification accuracy</p>
                 </div>
             </div>
@@ -215,26 +240,22 @@
             <h3>Detection and Path Planning</h3>
             <div class="results-grid">
                 <div class="result-item">
-                    <img src="Labeled Image Data.png" 
-                         alt="Labeled Training Data" class="responsive-img">
+                    <img src="Labeled Image Data.png" alt="Labeled Training Data" class="responsive-img">
                     <p class="image-caption">Labeled training images with bounding boxes</p>
                 </div>
                 <div class="result-item">
-                    <img src="Predicted Image.png" 
-                         alt="Prediction Results" class="responsive-img">
+                    <img src="Predicted Image.png" alt="Prediction Results" class="responsive-img">
                     <p class="image-caption">Real-time detection with confidence scores</p>
                 </div>
             </div>
 
             <div class="results-grid">
                 <div class="result-item">
-                    <img src="Predicted image with grid and coordinates.png" 
-                         alt="Grid System" class="responsive-img">
+                    <img src="Predicted image with grid and coordinates.png" alt="Grid System" class="responsive-img">
                     <p class="image-caption">Grid-based coordinate system for path planning</p>
                 </div>
                 <div class="result-item">
-                    <img src="Predicted Image with coordinates and path.png" 
-                         alt="Path Planning" class="responsive-img">
+                    <img src="Predicted Image with coordinates and path.png" alt="Path Planning" class="responsive-img">
                     <p class="image-caption">Dijkstra's algorithm path from robot to target</p>
                 </div>
             </div>
@@ -242,22 +263,24 @@
     </section>
 
     <!-- Kinematics Section -->
-    <section class="section bg-light">
+    <section class="section bg-light reveal">
         <div class="container">
             <h2>Robotic Arm Kinematics</h2>
-            
+
             <h3>Forward and Inverse Kinematics</h3>
             <p>
-                The 4-DOF robotic arm employs Denavit-Hartenberg (D-H) parameters for forward kinematics 
-                calculation and algebraic approach for inverse kinematics. This enables precise end-effector 
+                The 4-DOF robotic arm employs Denavit-Hartenberg (D-H) parameters for forward kinematics
+                calculation and algebraic approach for inverse kinematics. This enables precise end-effector
                 positioning for object manipulation.
             </p>
 
             <div class="equation-box">
                 <h4>Forward Kinematics End-Effector Position:</h4>
                 <div class="equation">
-                    <p><em>P<sub>x</sub></em> = cos(θ₁)[130cos(θ₂ + θ₃ + θ₄) + 216cos(θ₂ + θ₃) + 180cos(θ₂) + 100cos(θ₂)]</p>
-                    <p><em>P<sub>y</sub></em> = sin(θ₁)[130cos(θ₂ + θ₃ + θ₄) + 216cos(θ₂ + θ₃) + 180cos(θ₂) + 100cos(θ₂)]</p>
+                    <p><em>P<sub>x</sub></em> = cos(θ₁)[130cos(θ₂ + θ₃ + θ₄) + 216cos(θ₂ + θ₃) + 180cos(θ₂) +
+                        100cos(θ₂)]</p>
+                    <p><em>P<sub>y</sub></em> = sin(θ₁)[130cos(θ₂ + θ₃ + θ₄) + 216cos(θ₂ + θ₃) + 180cos(θ₂) +
+                        100cos(θ₂)]</p>
                     <p><em>P<sub>z</sub></em> = 145 - 108sin(θ₂ + θ₃) - 90sin(θ₂) - 130cos(θ₂ + θ₃ + θ₄)</p>
                 </div>
             </div>
@@ -273,8 +296,8 @@
                     </ol>
                 </div>
                 <div class="content-image">
-                    <img src="Flow Chart for motion planning.png" 
-                         alt="Motion Planning Flowchart" class="responsive-img">
+                    <img src="Coordinate Frame of 4 DOF Arm Robot.png" alt="Motion Planning Flowchart"
+                        class="responsive-img">
                     <p class="image-caption">Motion planning algorithm flowchart</p>
                 </div>
             </div>
@@ -282,7 +305,7 @@
     </section>
 
     <!-- Applications Section -->
-    <section class="section">
+    <section class="section reveal">
         <div class="container">
             <h2>Applications</h2>
             <div class="applications-grid">
@@ -307,7 +330,7 @@
     </section>
 
     <!-- Publications Section -->
-    <section class="section bg-light" id="publications">
+    <section class="section bg-light reveal" id="publications">
         <div class="container">
             <h2>Publications & Documentation</h2>
             <div class="publication-item">
@@ -319,12 +342,13 @@
                     <strong>Date:</strong> September 2024
                 </p>
                 <p class="pub-abstract">
-                    Complete major project report detailing the design, implementation, hardware integration, 
+                    Complete major project report detailing the design, implementation, hardware integration,
                     software algorithms, experimental results, and analysis of the automated mobile robot system.
                 </p>
                 <div class="pub-links">
-                    <a href="major-project-report.pdf" class="btn btn-primary" target="_blank">Download PDF</a>
-                    <a href="https://github.com/Roshan20222/Automated-Mobile-Robot-Object-Detection" class="btn btn-secondary" target="_blank">View Code</a>
+                    <a href="major_project_paper.pdf.pdf" class="btn btn-primary" target="_blank">Download PDF</a>
+                    <a href="https://github.com/Roshan20222/Automated-Mobile-Robot-Object-Detection"
+                        class="btn btn-secondary" target="_blank">View Code</a>
                 </div>
             </div>
 
@@ -336,7 +360,7 @@
                     <strong>Date:</strong> September 2025
                 </p>
                 <p class="pub-abstract">
-                    Peer-reviewed research paper presenting the design, control, and implementation of 
+                    Peer-reviewed research paper presenting the design, control, and implementation of
                     object detection-based automated mobile robot with performance metrics and validation results.
                 </p>
                 <div class="pub-links">
@@ -347,7 +371,7 @@
     </section>
 
     <!-- Contact Section -->
-    <section class="section" id="contact">
+    <section class="section reveal" id="contact">
         <div class="container">
             <h2>Contact</h2>
             <div class="contact-info">
@@ -370,5 +394,5 @@
 
     <script src="main.js"></script>
 </body>
+
 </html>
-  
